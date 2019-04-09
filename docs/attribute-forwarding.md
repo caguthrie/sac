@@ -8,7 +8,7 @@ Suppose we have a micro service that exposes an action "search" against a produc
 
 ### The access control problem
 
-We want our service to allow anyone to "search" our catalogue except a portion of them labeled as "premium members only". These content are for registered users only. Clearly, in this case we would not want our authorization mechanism to "deny" access to users so access must be granted. However, to assist our service down-stream with potentially applying a filter based on the authenticated principal we may want to forward some attributes about that principal, such as the fact the user is not registered or isn't a premium member
+We want our service to allow anyone to "search" our catalogue except a portion of them labeled as "premium members only". This content is for registered users only. Clearly, in this case, we would not want our authorization mechanism to "deny" access to users, so access must be granted. However, to assist our service down-stream with potentially applying a filter based on the authenticated principal, we may want to forward some attributes about that principal, such as the fact the user is not registered or isn't a premium member.
 
 ## Principal attribute sourcing
 
@@ -42,4 +42,4 @@ attributes:
   value: North America
 ```
 
-This information can then be forwarded to the downstream service to aid it's internal logic 
+This information can then be forwarded to the downstream service to aid its internal logic 
